@@ -13,6 +13,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var statusMenu: NSMenu!
+    
+    let startScript = "~/start.sh"
 
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
 
@@ -29,6 +31,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func menuClicked(sender: NSMenuItem) {
+        let startURL = NSBundle.mainBundle().URLForResource("startup", withExtension: "scpt")
+        var errors : NSDictionary? = [:]
+        
+        let script = NSAppleScript(contentsOfURL: startURL!, error: &errors)
+        script?.executeAndReturnError(&errors)
+        print(errors)        
     }
 
 }
