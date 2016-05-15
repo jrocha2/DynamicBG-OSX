@@ -669,7 +669,7 @@
         </menu>
         <menu id="QJf-Zz-N6D">
             <items>
-                <menuItem title="Start Dynamic Background" id="fNx-2b-sv3">
+                <menuItem title="Use Dynamic Background" id="fNx-2b-sv3">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="menuClicked:" target="Voe-Tx-rLC" id="78P-Si-cho"/>

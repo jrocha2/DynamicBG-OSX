@@ -32,10 +32,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBAction func menuClicked(sender: NSMenuItem) {
         let startURL = NSBundle.mainBundle().URLForResource("startup", withExtension: "scpt")
+        let closeURL = NSBundle.mainBundle().URLForResource("close", withExtension: "scpt")
+        var script = NSAppleScript()
         var errors : NSDictionary? = [:]
         
-        let script = NSAppleScript(contentsOfURL: startURL!, error: &errors)
-        script?.executeAndReturnError(&errors)
+        if sender.state == NSOnState {
+            sender.state = NSOffState
+            script = NSAppleScript(contentsOfURL: closeURL!, error: &errors)!
+        } else {
+            sender.state = NSOnState
+            script = NSAppleScript(contentsOfURL: startURL!, error: &errors)!
+        }
+        
+        script.executeAndReturnError(&errors)
         print(errors)        
     }
 
