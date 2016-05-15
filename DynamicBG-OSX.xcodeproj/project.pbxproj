@@ -11,6 +11,7 @@
 		E7053DC41CE87D66004ADF56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7053DC31CE87D66004ADF56 /* Assets.xcassets */; };
 		E7053DC71CE87D66004ADF56 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7053DC51CE87D66004ADF56 /* MainMenu.xib */; };
 		E7DC1A6F1CE9026A002B0303 /* startup.scpt in Resources */ = {isa = PBXBuildFile; fileRef = E7DC1A6E1CE9026A002B0303 /* startup.scpt */; };
+		E7DC1A711CE91850002B0303 /* close.scpt in Resources */ = {isa = PBXBuildFile; fileRef = E7DC1A701CE91850002B0303 /* close.scpt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		E7053DC61CE87D66004ADF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E7053DC81CE87D66004ADF56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7DC1A6E1CE9026A002B0303 /* startup.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = startup.scpt; sourceTree = "<group>"; };
+		E7DC1A701CE91850002B0303 /* close.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = close.scpt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				E7053DC11CE87D66004ADF56 /* AppDelegate.swift */,
 				E7DC1A6E1CE9026A002B0303 /* startup.scpt */,
+				E7DC1A701CE91850002B0303 /* close.scpt */,
 				E7053DC31CE87D66004ADF56 /* Assets.xcassets */,
 				E7053DC51CE87D66004ADF56 /* MainMenu.xib */,
 				E7053DC81CE87D66004ADF56 /* Info.plist */,
@@ -119,6 +122,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DC1A711CE91850002B0303 /* close.scpt in Resources */,
 				E7053DC41CE87D66004ADF56 /* Assets.xcassets in Resources */,
 				E7053DC71CE87D66004ADF56 /* MainMenu.xib in Resources */,
 				E7DC1A6F1CE9026A002B0303 /* startup.scpt in Resources */,
