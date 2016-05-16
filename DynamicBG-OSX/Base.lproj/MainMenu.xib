@@ -675,6 +675,13 @@
                         <action selector="menuClicked:" target="Voe-Tx-rLC" id="78P-Si-cho"/>
                     </connections>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="CdJ-8c-Sr6"/>
+                <menuItem title="Quit DynamicBG" id="yRz-Eq-L3p">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitApplication:" target="Voe-Tx-rLC" id="9YI-rb-MFf"/>
+                    </connections>
+                </menuItem>
             </items>
             <point key="canvasLocation" x="352.5" y="276.5"/>
         </menu>

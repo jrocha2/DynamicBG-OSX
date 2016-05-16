@@ -48,6 +48,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @IBAction func quitApplication(sender: NSMenuItem) {
+        NSApplication.sharedApplication().terminate(self)
+    }
+    
     func setDynamicBGEnabled(bool: Bool) {
         var script = NSAppleScript()
         var errors : NSDictionary? = [:]
