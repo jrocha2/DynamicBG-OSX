@@ -17,6 +17,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let startURL = NSBundle.mainBundle().URLForResource("startup", withExtension: "scpt")
     let closeURL = NSBundle.mainBundle().URLForResource("close", withExtension: "scpt")
     let prefURL = NSBundle.mainBundle().URLForResource("pref", withExtension: "scpt")
+    
+    var dontShowInfo = false
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         let icon = NSImage(named: "spring")
@@ -90,6 +92,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // Open System Preferences to allow choice
     @IBAction func selectBackground(sender: NSMenuItem) {
+        
+        if !dontShowInfo {
+            let alert = NSAlert()
+            alert.alertStyle = .InformationalAlertStyle
+            alert.showsSuppressionButton = true
+            alert.messageText = "Select Background"
+            alert.informativeText = "In order to simulate a dynamic background, please set it as your screen saver in the next screen even if you choose the option to start \"Never\""
+            alert.runModal()
+            
+            if alert.suppressionButton?.state == 0 {
+                dontShowInfo = false
+            } else {
+                dontShowInfo = true
+            }
+        }
+        
         var errors : NSDictionary? = [:]
         let script = NSAppleScript(contentsOfURL: prefURL!, error: &errors)!
         script.executeAndReturnError(&errors)
