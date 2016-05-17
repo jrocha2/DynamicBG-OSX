@@ -5,17 +5,18 @@
 This applet works by effectively running a screensaver in the background of your desktop to simulate a dynamic background effect. At this point in time, the main thing the user needs to do is:
 - Find a screensaver (either in the form of a .qtz or .saver file)
 
-
-###Setting the Background
-In order to set the background, you can do choose one of two paths:
-#####App Feature
-Selecting the action in the status bar uses a Finder window to choose a file. Doing so will prompt you for your password only because moving files into the appropriate folder has strict permissions. This is your computer prompting you to confirm the action, not the program, so your password remains well protected.
+###Installing a New Background
+In order to install a new background in the correct folder, you can do choose one of two paths:
+#####Menu Option
+Selecting the action in the status bar menu uses a Finder window to choose a file. Doing so will prompt you for your password only because moving files into the appropriate folder has strict permissions. This is your computer prompting you to confirm the action, not the program, so your password remains well protected.
 #####Manually
 If you are more comfortable moving files around yourself:
-- Place the screensaver file in the folder at the path `/Library/Screen\ Savers/`
-- In System Preferences, set the desired background to be your screensaver, even if you tell it to start "Never"
+- Place the screensaver file in the folder at the path `/Library/Screen Savers/`
 
-That's it! From here the app will do the rest as you can toggle the background on and off from the status bar. You probably figured out that this method means your background will be the same as your screensaver, but it's a small price to pay at this point.  
+###Selecting a Background
+As of now, you have to work through System Preferences to reliably make sure that your background is set (technically as your screen saver). You can do this by navigating there yourself, or just by selecting the relevant menu option. If you don't see a screensaver there that you installed, try manually installing it just to be sure. 
+
+That's it! From here the app will do the rest as you can toggle the background on and off from the status bar. You probably figured out at this point that this method means your background will be the same as your screensaver, but it's a small price to pay I think.  
 
 ###Resource Usage
 Running a screensaver can be more computer intensive the more complex it is, so just keep that in mind when choosing a screensaver as a background. Naturally, older computers will require a larger percentage of the CPU. The example background above consistently uses about 2% of the CPU on my 2013 Retina MacBook Pro. 
