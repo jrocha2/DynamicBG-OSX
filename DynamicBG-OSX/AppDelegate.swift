@@ -85,6 +85,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         errors = [:]
         script!.executeAndReturnError(&errors)
         print(errors)
+        
+        if statusMenu.itemArray[0].state == NSOnState {
+            setDynamicBGEnabled(true)
+        }
     }
     
     @IBAction func quitApplication(sender: NSMenuItem) {
