@@ -676,7 +676,13 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="CdJ-8c-Sr6"/>
-                <menuItem title="Select Background" id="fr2-nQ-Rtq">
+                <menuItem title="Select Background" id="2SL-DB-9n6">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="selectBackground:" target="Voe-Tx-rLC" id="En2-IW-BBm"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Install New Background" id="fr2-nQ-Rtq">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="chooseBackground:" target="Voe-Tx-rLC" id="y64-eG-Uvy"/>
