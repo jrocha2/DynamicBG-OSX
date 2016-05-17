@@ -47,6 +47,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @IBAction func chooseBackground(sender: NSMenuItem) {
+        let fileWindow = NSOpenPanel()
+        fileWindow.allowsMultipleSelection = false
+        fileWindow.canChooseDirectories = false
+        fileWindow.canCreateDirectories = false
+        fileWindow.canChooseFiles = true
+        let selection = fileWindow.runModal()
+        if selection == NSModalResponseOK {
+            print(fileWindow.URL)
+        }
+        
+    }
+    
     @IBAction func quitApplication(sender: NSMenuItem) {
         NSApplication.sharedApplication().terminate(self)
     }

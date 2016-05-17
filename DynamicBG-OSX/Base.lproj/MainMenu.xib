@@ -676,6 +676,13 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="CdJ-8c-Sr6"/>
+                <menuItem title="Select Background" id="fr2-nQ-Rtq">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="chooseBackground:" target="Voe-Tx-rLC" id="y64-eG-Uvy"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="DFZ-l0-Rqb"/>
                 <menuItem title="Quit DynamicBG" id="yRz-Eq-L3p">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
