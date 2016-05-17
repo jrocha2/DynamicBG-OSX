@@ -1,5 +1,7 @@
 # DynamicBG-OSX
 
+![Demo](demoFiles/demo.gif?raw=true) 
+
 This applet works by effectively running a screensaver in the background of your desktop to simulate a dynamic background effect. At this point in time, this takes a few steps on the user's part:
 - Find a screensaver (either in the form of a .qtz or .saver file)
 - Place this file in the folder at the path `/Library/Screen\ Savers/`
