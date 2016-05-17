@@ -60,6 +60,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     let nameURL = fileWindow.URL?.URLByDeletingPathExtension
                     let n = nameURL?.pathComponents?.count
                     setBackground(filePath, name: (nameURL?.pathComponents![n!-1])!)
+                } else {
+                    let alert = NSAlert()
+                    alert.messageText = "Error Selecting a File"
+                    alert.informativeText = "This error is most likely because the file you choose did not have a file extension of .qtz or .saver"
+                    alert.runModal()
                 }
             }
             
