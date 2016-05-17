@@ -55,9 +55,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         fileWindow.canChooseFiles = true
         let selection = fileWindow.runModal()
         if selection == NSModalResponseOK {
-            print(fileWindow.URL)
+            if let filePath = fileWindow.URL?.path {
+                if fileWindow.URL?.pathExtension == "saver" || fileWindow.URL?.pathExtension == "qtz" {
+                    setBackground(filePath)
+                }
+            }
+            
         }
+    }
+    
+    func setBackground(path: String) {
+        // Copy file to correct folder
+        let text = "set s to \"\(path)\"\n" +
+                    "set d to \"/Library/Screen Savers\"\n" +
+                    "do shell script \"cp \" & quoted form of s & \" \" & quoted form of d with administrator privileges"
+        let script = NSAppleScript(source: text)
+        var errors : NSDictionary? = [:]
         
+        script!.executeAndReturnError(&errors)
+        print(errors)
     }
     
     @IBAction func quitApplication(sender: NSMenuItem) {
