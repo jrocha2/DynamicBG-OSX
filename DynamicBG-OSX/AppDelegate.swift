@@ -57,21 +57,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if selection == NSModalResponseOK {
             if let filePath = fileWindow.URL?.path {
                 if fileWindow.URL?.pathExtension == "saver" || fileWindow.URL?.pathExtension == "qtz" {
-                    setBackground(filePath)
+                    let nameURL = fileWindow.URL?.URLByDeletingPathExtension
+                    let n = nameURL?.pathComponents?.count
+                    setBackground(filePath, name: (nameURL?.pathComponents![n!-1])!)
                 }
             }
             
         }
     }
     
-    func setBackground(path: String) {
+    func setBackground(path: String, name: String) {
         // Copy file to correct folder
-        let text = "set s to \"\(path)\"\n" +
+        var text = "set s to \"\(path)\"\n" +
                     "set d to \"/Library/Screen Savers\"\n" +
                     "do shell script \"cp \" & quoted form of s & \" \" & quoted form of d with administrator privileges"
-        let script = NSAppleScript(source: text)
+        var script = NSAppleScript(source: text)
         var errors : NSDictionary? = [:]
         
+        script!.executeAndReturnError(&errors)
+        print(errors)
+        
+        // Set it as the background
+        text = "tell application \"System Events\"\n" +
+               "set current screen saver to screen saver named \"\(name)\"\n" +
+               "end tell"
+        script = NSAppleScript(source: text)
+        errors = [:]
         script!.executeAndReturnError(&errors)
         print(errors)
     }
