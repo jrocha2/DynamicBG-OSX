@@ -16,9 +16,14 @@ If you are more comfortable moving files around yourself:
 - Place the screensaver file in the folder at the path `/Library/Screen Savers/`
 
 ###Selecting a Background
-As of now, you have to work through System Preferences to reliably make sure that your background is set (technically as your screen saver). You can do this by navigating there yourself, or just by selecting the relevant menu option. If you don't see a screensaver there that you installed, try manually installing it just to be sure. 
+As of now, you have to work through System Preferences to reliably make sure that your background is set (technically as your screen saver). You can do this by navigating there yourself, or just by selecting the relevant menu option. If you don't see a screensaver there that you installed, try manually installing it just to be sure.   
+  
 
-That's it! From here the app will do the rest as you can toggle the background on and off from the status bar. You probably figured out at this point that this method means your background will be the same as your screensaver, but it's a small price to pay I think.  
+That's it! From here the app will do the rest as you can toggle the background on and off from the status bar. You probably figured out at this point that this method means your background will be the same as your screensaver, but it's a small price to pay I think.
+
+###Setting App to Launch on Startup (Optional)
+If you want DynamicBG-OSX to always appear in your status bar when turning on your computer, add it to your login items in
+System Preferences. This can be found in *System Preferences -> Users & Groups -> Login Items*. Simply select the '+' symbol and find/select the DynamicBG-OSX application file. Doing this also means that if you had a dynamic background active when you turned off your computer, it will come back just as you left it upon restarting. 
 
 ###Resource Usage
 Running a screensaver can be more computer intensive the more complex it is, so just keep that in mind when choosing a screensaver as a background. Naturally, older computers will require a larger percentage of the CPU. The example background above consistently uses about 2% of the CPU on my 2013 Retina MacBook Pro. 
