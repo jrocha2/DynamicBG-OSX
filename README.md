@@ -1,4 +1,4 @@
-# DynamicBG-OSX
+![Title](/demoFiles/title.png)
 
 ![Demo](demoFiles/demo.gif?raw=true) 
 
