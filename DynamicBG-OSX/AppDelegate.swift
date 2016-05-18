@@ -18,6 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let closeURL = NSBundle.mainBundle().URLForResource("close", withExtension: "scpt")
     let prefURL = NSBundle.mainBundle().URLForResource("pref", withExtension: "scpt")
     
+    let defaults = NSUserDefaults()
     var dontShowInfo = false
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
@@ -27,12 +28,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.image = icon
         statusItem.menu = statusMenu
         
+        let shouldStartRunning = defaults.objectForKey("shouldStartRunning") as? Bool ?? false
+        dontShowInfo = defaults.objectForKey("dontShowInfo") as? Bool ?? false
+        if shouldStartRunning {
+            setDynamicBGEnabled(true)
+            statusMenu.itemArray[0].state = NSOnState
+        }
+        
         NSWorkspace.sharedWorkspace().notificationCenter.addObserver(self, selector: #selector(applicationWillWake), name: NSWorkspaceDidWakeNotification, object: nil)
+        NSWorkspace.sharedWorkspace().notificationCenter.addObserver(self, selector: #selector(applicationWillPowerOff), name: NSWorkspaceWillPowerOffNotification, object: nil)
     }
     
     func applicationWillWake(aNotification: NSNotification) {
         if statusMenu.itemArray[0].state == NSOnState {
             setDynamicBGEnabled(true)
+        }
+    }
+    
+    func applicationWillPowerOff(aNotification: NSNotification) {
+        if statusMenu.itemArray[0].state == NSOnState {
+            defaults.setObject(true, forKey: "shouldStartRunning")
+        } else {
+            defaults.setObject(false, forKey: "shouldStartRunning")
         }
     }
     
@@ -105,6 +122,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 dontShowInfo = false
             } else {
                 dontShowInfo = true
+                defaults.setObject(true, forKey: "dontShowInfo")
             }
         }
         
