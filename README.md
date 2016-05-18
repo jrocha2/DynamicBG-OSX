@@ -6,7 +6,9 @@ This applet works by effectively running a screensaver in the background of your
 - Find a screensaver (either in the form of a .qtz or .saver file)
 
 ###Installing a New Background
-In order to install a new background in the correct folder, you can do choose one of two paths:
+**NOTE:** *If the screensaver is a .saver file, the easiest installation method is usually just to double-click it. If that doesn't work then try the methods below*  
+  
+In order to install a new background in the correct folder, you can do choose one of two paths:  
 #####Menu Option
 Selecting the action in the status bar menu uses a Finder window to choose a file. Doing so will prompt you for your password only because moving files into the appropriate folder has strict permissions. This is your computer prompting you to confirm the action, not the program, so your password remains well protected.
 #####Manually
@@ -24,6 +26,12 @@ Running a screensaver can be more computer intensive the more complex it is, so 
 ###Helpful Link(s)
 I used this to convert a GIF to a screen saver, and since videos can be easily converted to GIFs, this opens up a lot of possible backgrounds  
 http://www.brandonsga.com/technical/2014/06/create-screensaver-animated-gif-mac-osx-mountain-lion
+
+######Possible Starter Background Recommendations:
+- https://github.com/Jonic/WhatColourIsIt-ScreenSaver
+- https://github.com/JohnCoates/Aerial
+- https://github.com/winterbe/github-matrix-screensaver
+- http://fliqlo.com/
   
 ###MIT License
 The MIT License (MIT)
