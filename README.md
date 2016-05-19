@@ -6,7 +6,8 @@ This applet works by effectively running a screensaver in the background of your
 - Find a screensaver (either in the form of a .qtz or .saver file)
 - Download and use the application
 
-###Download and Run the Application
+###Download and Run the Application  
+Created for OS X Versions 10.10 and later  
 [Click Here to Download](https://www.dropbox.com/s/9kqybmtmbpjldq0/DynamicBG-OSX.zip?dl=1)
 
 ###Installing a New Background
