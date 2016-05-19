@@ -4,6 +4,10 @@
 
 This applet works by effectively running a screensaver in the background of your desktop to simulate a dynamic background effect. At this point in time, the main thing the user needs to do is:
 - Find a screensaver (either in the form of a .qtz or .saver file)
+- Download and use the application
+
+###Download and Run the Application
+[Click Here to Download](https://www.dropbox.com/s/9kqybmtmbpjldq0/DynamicBG-OSX.zip?dl=1)
 
 ###Installing a New Background
 **NOTE:** *If the screensaver is a .saver file, the easiest installation method is usually just to double-click it. If that doesn't work then try the methods below*  
